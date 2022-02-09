@@ -1,0 +1,44 @@
+/* Блок списка соцсетей */
+
+.socials-list {
+   display: flex;
+   &--center {
+      justify-content: center;
+   }
+}
+
+.socials-list__item {
+   width: 44px;
+   height: 44px;
+   &:nth-child(n + 2) {
+   margin-left: 10px;
+   }
+}
+
+.socials-list__link {
+   @extend %FlexCenteredX;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   &:hover,
+   &:focus {
+   background-color: $accent-color;
+   }
+   &--dark {
+   background: rgba(255, 255, 255, 0.1);
+}
+}
+
+.socials-list__icon {
+   fill: $add-color;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   &--white {
+   fill: $white-color;
+   }
+   .socials-list__link:hover &,
+   .socials-list__link:focus & {
+      fill: $white-color;
+   }
+}

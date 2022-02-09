@@ -1,0 +1,102 @@
+/* Блок footer */
+
+.footer {
+   max-width: 1600px;
+   margin: auto;
+   padding-top: 60px;
+   padding-bottom: 60px;
+   background-color: $footer-bg-color;
+}
+
+.footer-blocks {
+   display: flex;
+   align-items: baseline;
+}
+
+/* Блок footer - address */
+
+.address {
+   flex-grow: 1;
+   margin-right: 70px;
+}
+
+.address__list {
+   font-size: 14px;
+   line-height: 1.71;
+   letter-spacing: 0.03em;
+   font-style: normal;
+   margin-top: 20px;
+}
+
+.address__item:nth-child(n + 2) {
+   margin-top: 9px;
+}
+
+.address__cityname {
+   color: $white-color;
+   text-decoration: none;
+}
+
+.address__text {
+   color: rgba(255, 255, 255, 0.6);
+   text-decoration: none;
+}
+
+/* Блок footer - socials */
+
+.joinup {
+   margin-right: 93px;
+}
+
+.joinup__title {
+   margin-bottom: 20px;
+   color: $white-color;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+}
+
+/* Блок footer - mailup */
+
+.mailup__field {
+   @extend %FlexCenteredX;
+}
+
+.mailup__input {
+   @extend %FlexCenteredX;
+   min-width: 358px;
+   height: 50px;
+   padding: 15px;
+   font-family: $main-font;
+   font-size: 16px;
+   line-height: 1.25;
+   letter-spacing: 0.03em;
+   color: rgba(255, 255, 255, 0.6);
+   background-color: $footer-bg-color;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   box-sizing: border-box;
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+   border-radius: 4px;
+   &:focus {
+      color: $white-color;
+      border-color: $accent-color;
+      outline: none;
+   }
+}
+
+.mailup__btn {
+   @extend %FlexCenteredX;;
+   padding: 13px 28px;
+   margin: 0;
+   margin-left: 12px;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   &:hover,
+   &:focus {
+      background-color: $hover-accent-color;
+   }
+}
+
+.mailup__icon {
+   margin-left: 10px;
+}

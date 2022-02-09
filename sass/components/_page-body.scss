@@ -1,0 +1,133 @@
+/* Оформление Skills */
+
+.skills__list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.skills__item {
+   width: 270px;
+   &:nth-child(n + 2)  {
+      margin-left: 30px;
+   }
+}
+
+.skills__thumb {
+   @extend %FlexCenteredX;
+   justify-content: center;
+   height: 120px;
+   background-color: $add-bg-color;
+}
+
+.skills__title {
+   color: $title-color;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   margin-top: 30px;
+}
+
+.skills__text {
+   color: $text-color;
+   font-size: 14px;
+   line-height: 1.71;
+   letter-spacing: 0.03em;
+   margin-top: 10px;
+}
+
+/* Оформление Works+Team */
+
+.works__item {
+   width: 370px;
+   height: 294px;
+   position: relative;
+   &:nth-child(n + 2) {
+      @extend %MarginItem;
+   }
+}
+
+.works__thumb {
+   position: absolute;
+   bottom: 0;
+   width: 370px;
+   height: 70px;
+   background-color: rgba(47, 48, 58, 0.8);
+   padding-top: 27px;
+   padding-bottom: 27px;
+}
+
+.works__text {
+   font-size: 14px;
+   line-height: 1.14;
+   text-align: center;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   color: $white-color;
+}
+
+.team {
+   background-color: $add-bg-color;
+}
+
+.team__item {
+   width: 270px;
+   text-align: center;
+   background: $white-color;
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+   border-radius: 0px 0px 4px 4px;
+   &:nth-child(n + 2) {
+   @extend %MarginItem;
+}
+}
+
+.team__name {
+   color: $title-color;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 1.19;
+   letter-spacing: 0.03em;
+   text-align: center;
+}
+
+.team__prof {
+   color: $text-color;
+   font-size: 16px;
+   line-height: 1.19;
+   letter-spacing: 0.03em;
+   text-align: center;
+   margin-top: 10px;
+   margin-bottom: 16px;
+}
+
+.team__thumb {
+   padding: 30px 0;
+}
+
+/* Оформление clients */
+
+.clients__link {
+   @extend %FlexCenteredX;
+   justify-content: center;
+   width: 170px;
+   height: 92px;
+   border: 1px solid $add-color;
+   border-radius: 4px;
+   color: $add-color;
+   text-decoration: none;
+   @include MainTransition(color border-color);
+   &:hover, 
+   &:focus {
+      color: $accent-color;
+      border-color: $accent-color;
+   }
+}
+
+.clients__item:nth-child(n + 2) {
+   @extend %MarginItem;
+}
+
+.clients__icon {
+   fill: currentColor;
+}
