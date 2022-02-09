@@ -81,7 +81,7 @@
    background-color: rgba(33, 150, 243, 0.9);
    transform: translateY(100%);
    overflow: hidden;
-   @include MainTransition(transform opacity);
+   @include MainTransition(transform);
    .projects-list__link:hover & {
       transform: translateY(0);
       opacity: 1;
