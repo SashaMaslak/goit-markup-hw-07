@@ -76,19 +76,16 @@
    position: relative;
    display: flex;
    flex-direction: column;
+   margin-bottom: 4px;
    color: $text-color;
    font-size: 12px;
    line-height: 1.17;
    letter-spacing: 0.01em;
-   &:nth-child(n + 2) {
-      margin-top: 10px;
-   }
 }
 
 .form__input {
    width: 448px;
    height: 40px;
-   margin-top: 4px;
    padding: 12px 12px 12px 42px;
    border: 1px solid rgba(33, 33, 33, 0.2);
    box-sizing: border-box;
@@ -103,7 +100,6 @@
 .form__textarea {
    width: 448px;
    height: 120px;
-   margin-top: 4px;
    padding: 12px 16px;
    font-family: $main-font;
    resize: none;
@@ -167,10 +163,18 @@
    }
 }
 
+.modal-input-wrap {
+   position: relative;
+   &:nth-child(n + 2) {
+   margin-top: 10px;
+}
+}
+
 .form__icon {
    position: absolute;
-   top: 29px;
+   top: 50%;
    left: 12px;
+   transform: translate(-50%);
    display: inline-block;
    width: 18px;
    height: 18px;
