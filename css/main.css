@@ -185,46 +185,7 @@ button {
   cursor: pointer;
 }
 
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -1px;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.section__title {
-  color: #212121;
-  font-size: 36px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
-.section__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 50px;
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.socials-list__link, .mailup__btn, .mailup__input, .mailup__field, .clients__link, .skills__thumb, .contact-list__link, .main-nav, .nav {
+.socials__link, .mailup__btn, .mailup__input, .mailup__field, .clients__link, .skills__thumb, .contact-list__link, .container__header, .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,21 +207,58 @@ button {
   text-decoration: none;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section__title {
+  color: #212121;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.section--nopaddingtop {
+  padding-top: 0;
+}
+.section.section--bganother {
+  background-color: #f5f4fa;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
 .logo {
   font-family: Raleway, sans-serif;
+  color: #2196f3;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-.logo__begin {
-  color: #2196f3;
-}
-.logo__end--black {
+.logo--black {
   color: #000000;
 }
-.logo__end--white {
+.logo--white {
   color: #ffffff;
 }
 
@@ -382,7 +380,7 @@ button {
   text-transform: uppercase;
 }
 
-.main-btn {
+.hero__btn {
   min-width: 200px;
   height: 50px;
   margin-top: 30px;
@@ -400,12 +398,12 @@ button {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.main-btn:hover, .main-btn:focus {
+.hero__btn:hover, .hero__btn:focus {
   background-color: #188CE8;
 }
 
 /* Оформление Skills */
-.skills__list {
+.skills {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,6 +447,13 @@ button {
 }
 
 /* Оформление Works+Team */
+.team, .works, .clients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+
 .works__item {
   width: 370px;
   height: 294px;
@@ -473,10 +478,6 @@ button {
   color: #ffffff;
 }
 
-.team {
-  background-color: #f5f4fa;
-}
-
 .team__item {
   width: 270px;
   text-align: center;
@@ -485,7 +486,11 @@ button {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team__name {
+.team__thumb {
+  padding: 30px 0;
+}
+
+.team__title {
   color: #212121;
   font-weight: 500;
   font-size: 16px;
@@ -494,7 +499,7 @@ button {
   text-align: center;
 }
 
-.team__prof {
+.team__text {
   color: #757575;
   font-size: 16px;
   line-height: 1.19;
@@ -502,10 +507,6 @@ button {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 16px;
-}
-
-.team__thumb {
-  padding: 30px 0;
 }
 
 /* Оформление clients */
@@ -633,26 +634,24 @@ button {
 }
 
 /* Блок списка соцсетей */
-.socials-list {
+.socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.socials-list--center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.socials-list__item {
+.socials__item {
   width: 44px;
   height: 44px;
 }
-.socials-list__item:nth-child(n+2) {
+.socials__item:nth-child(n+2) {
   margin-left: 10px;
 }
 
-.socials-list__link {
+.socials__link {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -662,22 +661,22 @@ button {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.socials-list__link:hover, .socials-list__link:focus {
+.socials__link:hover, .socials__link:focus {
   background-color: #2196f3;
 }
-.socials-list__link--dark {
+.socials__link--dark {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.socials-list__icon {
+.socials__icon {
   fill: #AFB1B8;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.socials-list__icon--white {
+.socials__icon--white {
   fill: #ffffff;
 }
-.socials-list__link:hover .socials-list__icon, .socials-list__link:focus .socials-list__icon {
+.socials__link:hover .socials__icon, .socials__link:focus .socials__icon {
   fill: #ffffff;
 }
 
@@ -860,7 +859,7 @@ button {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.form__checked a {
+.form__checked .form_policy {
   color: #2196f3;
 }
 
@@ -905,7 +904,7 @@ button {
 .form__icon {
   position: absolute;
   top: 50%;
-  left: 12px;
+  left: 20px;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   display: inline-block;
@@ -920,7 +919,7 @@ button {
 
 /* ОФОРМЛЕНИЕ СТРАНИЦЫ ПОРТФОЛИО */
 /* Меню */
-.filter-list {
+.filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -929,11 +928,11 @@ button {
           justify-content: center;
   margin-bottom: 50px;
 }
-.filter-list:nth-child(n+2) {
+.filter:nth-child(n+2) {
   margin-left: 8px;
 }
 
-.filter-list__btn {
+.filter__btn {
   padding: 6px 22px;
   background-color: #f5f4fa;
   color: #212121;
@@ -947,7 +946,7 @@ button {
   -webkit-transition: color background-color box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color background-color box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.filter-list__btn:hover, .filter-list__btn:focus {
+.filter__btn:hover, .filter__btn:focus {
   background-color: #2196f3;
   color: #ffffff;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -955,7 +954,7 @@ button {
 }
 
 /* Проэкты */
-.projects-list {
+.projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -963,36 +962,36 @@ button {
       flex-wrap: wrap;
   margin: -15px;
 }
-.projects-list__is-hidden {
+.projects__is-hidden {
   position: relative;
   overflow: hidden;
 }
 
-.projects-list__item {
+.projects__item {
   width: 370px;
   margin: 15px;
   border: 1px solid #EEEEEE;
   position: relative;
 }
 
-.projects-list__link {
+.projects__link {
   display: block;
   width: 100%;
   text-decoration: none;
   -webkit-transition: border-radius box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-radius box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects-list__link:hover, .projects-list__link:focus {
+.projects__link:hover, .projects__link:focus {
   border-radius: 4px;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.projects-list__thumb {
+.projects__thumb {
   padding: 20px 24px;
 }
 
-.project-list__text {
+.projects__about {
   position: absolute;
   top: 0;
   left: 0;
@@ -1013,20 +1012,20 @@ button {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects-list__link:hover .project-list__text {
+.projects__link:hover .projects__about {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
-.projects-list__name {
+.projects__title {
   color: #212121;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.projects-list__branch {
+.projects__text {
   color: #757575;
   font-size: 16px;
   line-height: 1.86;

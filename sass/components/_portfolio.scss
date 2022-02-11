@@ -2,7 +2,7 @@
 
 /* Меню */
 
-.filter-list {
+.filter {
    display: flex;
    justify-content: center;
    margin-bottom: 50px;
@@ -11,7 +11,7 @@
    }
 }
 
-.filter-list__btn {
+.filter__btn {
    padding: 6px 22px;
    background-color: $add-bg-color;
    color: $title-color;
@@ -33,7 +33,7 @@
 
 /* Проэкты */
 
-.projects-list {
+.projects {
    display: flex;
    flex-wrap: wrap;
    margin: -15px;
@@ -43,14 +43,14 @@
    }
 }
 
-.projects-list__item {
+.projects__item {
    width: 370px;
    margin: 15px;
    border: 1px solid $border-projects-list;
    position: relative;
 }
 
-.projects-list__link {
+.projects__link {
    display: block;
    width: 100%;
    text-decoration: none;
@@ -62,11 +62,11 @@
    }
 }
 
-.projects-list__thumb {
+.projects__thumb {
    padding: 20px 24px;
 }
 
-.project-list__text {
+.projects__about {
    position: absolute;
    top: 0;
    left: 0;
@@ -82,20 +82,20 @@
    transform: translateY(100%);
    overflow: hidden;
    @include MainTransition(transform);
-   .projects-list__link:hover & {
+   .projects__link:hover & {
       transform: translateY(0);
       opacity: 1;
    }
 }
 
-.projects-list__name {
+.projects__title {
    color: $title-color;
    font-size: 18px;
    line-height: 2;
    letter-spacing: 0.06em;
 }
 
-.projects-list__branch {
+.projects__text {
    color: $text-color;
    font-size: 16px;
    line-height: 1.86;

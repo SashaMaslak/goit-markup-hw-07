@@ -1,13 +1,11 @@
 /* Блок списка соцсетей */
 
-.socials-list {
+.socials {
    display: flex;
-   &--center {
-      justify-content: center;
-   }
+   justify-content: center;
 }
 
-.socials-list__item {
+.socials__item {
    width: 44px;
    height: 44px;
    &:nth-child(n + 2) {
@@ -15,7 +13,7 @@
    }
 }
 
-.socials-list__link {
+.socials__link {
    @extend %FlexCenteredX;
    justify-content: center;
    width: 100%;
@@ -31,14 +29,14 @@
 }
 }
 
-.socials-list__icon {
+.socials__icon {
    fill: $add-color;
    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    &--white {
    fill: $white-color;
    }
-   .socials-list__link:hover &,
-   .socials-list__link:focus & {
+   .socials__link:hover &,
+   .socials__link:focus & {
       fill: $white-color;
    }
 }

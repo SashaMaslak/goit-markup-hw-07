@@ -1,0 +1,17 @@
+%FlexCenteredX {
+   display: flex;
+   align-items: center;
+}
+
+%MarginItem {
+   margin-left: 30px;
+}
+
+%FontLinkHeader {
+   padding: 10px 0;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.02em;
+   text-decoration: none;
+}

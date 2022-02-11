@@ -129,7 +129,7 @@
    font-size: 14px;
    line-height: 1.71;
    letter-spacing: 0.03em;
-   & a {
+   & .form_policy {
       color: $accent-color;
    }
 }
@@ -173,7 +173,7 @@
 .form__icon {
    position: absolute;
    top: 50%;
-   left: 12px;
+   left: 20px;
    transform: translate(-50%);
    display: inline-block;
    width: 18px;

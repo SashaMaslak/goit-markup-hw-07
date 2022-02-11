@@ -1,19 +1,15 @@
 .logo {
    font-family: $logo-font;
+   color: $accent-color;
    font-weight: 700;
    font-size: 26px;
    line-height: 1.19;
    letter-spacing: 0.03em;
    text-decoration: none;
-   &__begin {
-      color: $accent-color;
-   }
-
-   &__end--black {
+   &--black {
       color: $black-color;
    }
-
-   &__end--white {
+   &--white {
       color: $white-color;
    }
 }

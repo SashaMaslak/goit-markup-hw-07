@@ -1,0 +1,17 @@
+.section {
+   padding-top: 94px;
+   padding-bottom: 94px;
+   &__title {
+   color: $title-color;
+   font-size: 36px;
+   line-height: 1.17;
+   letter-spacing: 0.03em;
+   text-align: center;
+   }
+   &--nopaddingtop {
+      padding-top: 0;
+   }
+   &.section--bganother {
+      background-color: $add-bg-color;
+   }
+}
